@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var title = ""
+    @State private var message = ""
     @State private var image = ""
     
     var body: some View {
@@ -19,24 +19,23 @@ struct ContentView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 300, height: 300)
-                .foregroundStyle(.purple)
-            Text(title)
+                .foregroundStyle(.black)
                 
-            
+            Text(message)
             Spacer()
             
             HStack{
                 Button("Peace") {
                     image = "peacesign"
-                    title = "Peace"
+                    message = "Peace"
                 }
                 Button("Love") {
                     image = "heart"
-                    title = "Love"
+                    message = "Love"
                 }
                 Button("Understanding") {
-                    image = "info.circle"
-                    title = "Understanding"
+                    image = "lightbulb"
+                    message = "Understanding"
                 }
             }
             .font(.title3)
